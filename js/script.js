@@ -61,11 +61,13 @@ function setSquare(){
 	animateIn();
 }
 function goNext(){
+	if($('#front').hasClass('open'))return;
 	var projet_int = _currentProjet_int + 1;		
 	if(projet_int > _data_array.length-1)projet_int=0;
 	document.location.hash = '!/'+_data_array[projet_int]['id'];	
 }
 function goPrev(){
+	if($('#front').hasClass('open'))return;
 	var projet_int = _currentProjet_int - 1;	
 	if(projet_int < 0)projet_int=_data_array.length-1;		
 	document.location.hash = '!/'+_data_array[projet_int]['id'];	
