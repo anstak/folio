@@ -248,8 +248,22 @@ footer .read:hover{color:#fff!important}
 
 
 
+#controls{position:absolute;width:480px;height:8px;display:block;bottom:0px;}
+/* base styles */
+.ghinda-video-player {}
+/* Start of simpledark default theme */
+.ghinda-video-player.simpledark .ghinda-video-controls {position:relative;margin-top:0px;}
 
+/* seek */
+.ghinda-video-player.simpledark .ghinda-video-seek {position:absolute;width: 100%;height: 8px;top: 3px;left:0px;background: #5d5555;}
+.ghinda-video-player.simpledark .ghinda-video-seek .ui-slider-range {background: #b2b2b2;}
+/* timer */
 
+/* needed jquery ui styles
+ * using these, we don't depend on jQuery UI's stylsheet
+ */
+.ui-slider-handle { position: absolute;z-index: 2;display: block;margin-left:-0.6em;cursor: default;outline: none;}
+.ui-slider-range {display:block;width:100%;height:100%;left:0;bottom: 0;border:0 none;position:absolute;z-index:1;}
 
 
 

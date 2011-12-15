@@ -77,7 +77,7 @@ function animateOut(){
 	_isImgLoaded_bool = false;
 	loadImg();	
 	$('#front').removeClass('open');
-	$('.fleche-next,.fleche-prev ').fadeOut(500);
+	$('.fleche-next,.fleche-prev ').fadeOut(500,'easeInOutCubic');
 	setTimeout(animateSquareOut,300);
 }
 
@@ -93,9 +93,9 @@ function animateSquareOut(){
 			square.unbind('mouseleave');
 			square.unbind('click');
 			if(i==3){
-				square.stop(true,true).delay(delay).fadeOut(400,function(){_isAnimateOut_bool=true;checkIfAnimateIn();});
+				square.stop(true,true).delay(delay).fadeOut(400,'easeInOutCubic',function(){_isAnimateOut_bool=true;checkIfAnimateIn();});
 			}else{
-				square.stop(true,true).delay(delay).fadeOut(400);
+				square.stop(true,true).delay(delay).fadeOut(400,'easeInOutCubic');
 			}
 		}		
 	}
@@ -112,7 +112,7 @@ function animateIn(){
 		}
 		
 		$(this).css({'display':'block','opacity':1,'left':3*150+'px','top':3*150+'px','background-image':'url("img/'+_data_array[_currentProjet_int]['img']+'")','background-position-x':'0px','background-position-y':'0px'});
-		$(this).animate({'left':c*150+'px','top':r*150+'px','background-position-x':-c*150+'px','background-position-y':-r*150+'px'},1000);	
+		$(this).animate({'left':c*150+'px','top':r*150+'px','background-position-x':-c*150+'px','background-position-y':-r*150+'px'},1000,'easeInOutCubic');	
 	})
 	$('#front').find('li').each(function (i){		
 		c++;
@@ -128,7 +128,8 @@ function animateIn(){
 	$('#front').delay(500).queue(function(){
 		$(this).addClass('open');
 		$(this).dequeue();
-		$(this).find('video').attr('src','video/'+_data_array[_currentProjet_int]['video']+'.mp4');
+		$(this).find('video>source').attr('src','video/'+_data_array[_currentProjet_int]['video']+'.mp4');
+		$(this).find('video').load();	
 		$(this).find('video').get(0).play();
 		$(this).find('h2').empty().html(_data_array[_currentProjet_int]['titre']);
 	})
@@ -142,7 +143,7 @@ function animateIn(){
 	back.find('p.link').html(_data_array[_currentProjet_int]['link']);
 
 	
-	$('.fleche-next,.fleche-prev').delay(1000).fadeIn();
+	$('.fleche-next,.fleche-prev').delay(1000).fadeIn(500,'easeInOutCubic');
 	setTimeout(setSquareListener,1000);
 
 }
@@ -150,8 +151,8 @@ function setSquareListener(){
 	var square,i;
 	$('#square-ul').find('.square').each(function (i){
 		
-		$(this).bind('mouseenter',function (){$(this).stop(true,true).animate({'opacity':.5},500)});
-		$(this).bind('mouseleave',function(){$(this).stop(true,true).animate({'opacity':1},500)});
+		$(this).bind('mouseenter',function (){$(this).stop(true,true).animate({'opacity':.5},500,'easeInOutCubic')});
+		$(this).bind('mouseleave',function(){$(this).stop(true,true).animate({'opacity':1},500,'easeInOutCubic')});
 	})
 }
 var x,y;
@@ -222,9 +223,10 @@ function loadData(){
 		    }
 		    _currentUrl_str = document.location.hash;
 		    if($('html').hasClass('csstransforms3d')){
-		   loadAllImg();
-	_utils5g.settings_obj.window.bind('resize',onResize);
-	onResize();		
+		   loadAllImg();	 
+		$('video').gVideo();
+			_utils5g.settings_obj.window.bind('resize',onResize);
+			onResize();		
 		}else{
 			initSite();
 		}
@@ -299,12 +301,12 @@ function toggleMore(){
 		front.removeClass('open');
 		setTimeout(function(){$('#square-ul').toggleClass('more');},500);
 		setTimeout(function(){back.addClass('open');},2000)
-		$('.fleche-next,.fleche-prev').fadeOut();	
+		$('.fleche-next,.fleche-prev').fadeOut(500,'easeInOutCubic');	
 	}else{
 		back.removeClass('open');
 		setTimeout(function(){$('#square-ul').toggleClass('more');},500);
 		setTimeout(function(){front.addClass('open');},2000);	
-		$('.fleche-next,.fleche-prev').delay(2000).fadeIn();
+		$('.fleche-next,.fleche-prev').delay(2000).fadeIn(500,'easeInOutCubic');
 	}	
 }
 
@@ -316,13 +318,13 @@ function toggleContact(){
 		$('#contact .read').text('Read less!');
 		$('video').get(0).pause();
 		$('#contact.open article').css({'margin-top':-$('.text-cont').height()-40+'px'});
-		$('#projet').animate({'opacity':.3});
+		$('#projet').animate({'opacity':.3},1000,'easeInOutCubic');
 		disableProject();
 	}else{
 		$('#contact .read').text('Read more!');
 		$('video').get(0).play();
 		$('#contact article').css({'margin-top':0+'px'});
-	$('#projet').animate({'opacity':1})	
+	$('#projet').animate({'opacity':1},1000,'easeInOutCubic')	
 	}
 }
 
@@ -349,7 +351,7 @@ function onResize(){
 _imgToLoad = 0;
 function loadAllImg(){
 	if(_imgToLoad==_data_array.length){
-		$('.pourc').fadeOut();
+		$('.pourc').fadeOut(500,'easeInOutCubic');
 		setTimeout(checkUrl,100);
 		loadImg();	
 		return;
