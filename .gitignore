@@ -1,0 +1,15 @@
+.bundle
+db/*.sqlite3
+log/*.log
+cache/*
+tmp/
+.sass-cache/
+doc/
+*.swp
+*~
+.project
+.DS_Store
+*.log
+*.mp4
+*.ogv
+*.webm

@@ -1,0 +1,148 @@
+ { 
+   "projets": [ 
+      {
+          "id":"5emegauche",
+          "titre":"5emegauche",
+          "img": "5emegauche.jpg", 
+          "video":"5emeg",
+          "year":"2011",
+          "client":"5emegauche, a digital communication agency. In short, the agency where I am now!",
+          "idea":"This site presents our vision of the digital, shows what we can do and how we are relevant to our topics.",
+          "code":"I did this one using HTML5 framework Boilerplate and jQuery. There's a flash backup for the HTML5 video.",
+          "nicePart":"A site for 5emegauche in 5 days! A real treat. And besides, we won a awwwards. Have a look at the 404!",
+          "link":"<a href='http://www.5emegauche.com' target='_blank'>Visit website!</a>"
+      }, 
+      {
+          "id":"ruinart",
+          "titre":"Ruinart",
+          "img": "ruinart.jpg", 
+          "video":"ruinart",
+          "year":"2011",
+          "client":"Ruinart, a luxurious and confidential Champagne house.  ",
+          "idea":"Create an immersive experience into the Maison Ruinart. Show the specificities of Ruinart champagnes. Explore the different cuvee and know-how of the House is installed for a long time.",
+          "code":"This site is built with HTML5 Framework Boilerplate and Jquery. The navigation into the different requires lot of ajax call and need to be deep linked.",
+          "nicePart":"A site entirely in HTML5 with a nice place for a visual. I definitely enjoyed building the collection interpretation page!",
+          "link":"<a href='http://www.ruinart.com' target='_blank'>Visit website!</a>"
+      }, 
+      {
+          "id":"dior",
+          "titre":"Dior",
+          "img": "dior.jpg", 
+          "video":"dior",
+          "year":"2010",
+          "client":"The big reference of Beauty and Fashion.",
+          "idea":"For Christmas, we staged in an innovative way some products of the brand.<br>The concept: give a magical twist to Christmas gifts presentation.",
+          "code":"AS2 flash website in the need to be integrated into the general Dior Website.",
+          "nicePart":"The interative video that you could play backward or forward depending the mouse position.",
+          "link":"Out of date"
+      },  
+      {
+          "id":"darty-cuisine",
+          "titre":"Darty Cuisine",
+          "img": "darty-cuisine.jpg", 
+          "video":"darty",
+          "year":"2010",
+          "client":"Darty. You probably know them, they are the french reference of home appliances.",
+          "idea":"Darty diversify their offer and launch a kitchen branch. On this occasion, we set up a dedicated space in the general site of Darty: darty.com",
+          "code":"This site is usign XHTML 1.0 transitional as it's been including in the general Darty website. Headers are done with flash for the video and most of the interactions are donne with jQuery.",
+          "nicePart":"The immersive video carrousel on the top as an introduction to the rest of the page.",
+          "link":"<a href='http://www.darty.com/achat/cuisine/index.hmtl' target='_blank'>Visit website!</a>"
+      },
+      {
+          "id":"taxi-g7",
+          "titre":"Taxi G7",
+          "img": "taxi-g7.jpg", 
+          "video":"taxi",
+          "year":"2010",
+          "client":"TaxiG7. A taxi company.",
+          "idea":"Show the depth of supply of taxiG7 and the dynamic of the range.<br>We set up this site simple and friendly. ",
+          "code":"XHTML/CSS with some flash animation.",
+          "nicePart":"The live entertainment quite relevant.",
+          "link":"<a href='http://www.taxisg7.fr' target='_blank'>Visit website!</a>"
+      },
+      {
+          "id":"amorino",
+          "titre":"Amorino",
+          "img": "amorino.jpg",
+          "video":"amorino",
+          "year":"2009",
+          "client":"Amorino, a delicious brand of Italian ice cream.",
+          "idea":"Amorino has a network of physical shops and wanted to establish its online presence.",
+          "code":"Basic HTML/CSS website",
+          "nicePart":"The beautiful game on the ingredients, it makes you want to splurge on them.",
+          "link":"<a href='http://www.amorino.com' target='_blank'>Visit website!</a>"
+      }, 
+      {
+          "id":"channel4",
+          "titre":"Routes game",
+          "img": "routes.jpg", 
+          "video":"routesgames",
+          "year":"2009",
+          "client":"Channel4,  the great English television channel.",
+          "idea":"Routes is a game for a period of 8 weeks of Channel 4 Education in collaboration with the Wellcome Trust, which takes players into the world of genetics, evolution and the human genome.",
+          "code":"XHTML/CSS website",
+          "nicePart":"The idea itself! Nice way to teach kids about genetic with digital tools!",
+          "link":"<a href='http://www.5emegauche.com' target='_blank'>Visit website!</a>"
+      },  
+      {
+          "id":"hussein-chalayan",
+          "titre":"Hussein<br>Chalayan",
+          "img": "husseinchalayan.jpg", 
+          "video":"chalayan",
+          "year":"2008",
+          "client":"Hussein Chalayan is turkish and english  fashion designer. Great fashion.",
+          "idea":"Present the work, current events, history and philosophy of the designer. Contents are easily accessible and in compliance with the beauty of the work. ",
+          "code":"ActionScript3 dynamic full flash site with deep liking. WordPress css skinning for the blog part.",
+          "nicePart":"Experiential site and very arty, with a lot of movements and softness.",
+          "link":"<a href='http://www.husseinchalayan.com' target='_blank'>Visit website!</a>"
+      },
+      {
+          "id":"adjaye-associates",
+          "titre":"Adjaye",
+          "img": "adjaye.jpg", 
+          "video":"adjaye",
+          "year":"2008",
+          "client":"David Adjaye is contemporary english architect.",
+          "idea":"Create an online face to the company. Expose all the projects and the news of Adjaye associate",
+          "code":"ActionScript3 full flash website",
+          "nicePart":"Every page gets its uniaue gris that you discover with the ambiant lighning.",
+          "link":"<a href='http://www.adjaye.com' target='_blank'>Visit website!</a>"
+      }, 
+      {
+          "id":"hm",
+          "titre":"H&M",
+          "img": "hm-aw-08.jpg", 
+          "video":"hm",
+          "year":"2007-2008",
+          "client":"H&M, the worldwide swedish clothing brand.",
+          "idea":"Present the collection in a unique, ergonomic and aesthetic. Constant renewal needed for fashion shows. Did 3 website AW07, SS08, AW08.",
+          "code":"ActionScript2 full flash website integrate to the HM SDK.",
+          "nicePart":"Multilangual ecommerce flash websites",
+          "link":"Out of date"
+      }, 
+      {
+          "id":"plum",
+          "titre":"Plum vision",
+          "img": "plum.jpg", 
+          "video":"plum",
+          "year":"2008",
+          "client":"Plum is a baby food company",
+          "idea":"Deliver a delightful moment of pleasure and enjoyment for mothers, fathers and babies.",
+          "code":"Actionscript3 full flash website with deep linking. Video curePoints",
+          "nicePart":"Nice, funny, refreshing, new and an awesome video production. ",
+          "link":"<a href='http://www.plum-vision.co.uk' target='_blank'>Visit website!</a>"
+      }, 
+      {
+          "id":"hulger",
+          "titre":"Hulger",
+          "img": "hulger.jpg", 
+          "video":"hulger",
+          "year":"2011",
+          "client":"Retro phone for the future",
+          "idea":"Present all the phone of the brand and accessories",
+          "code":"HTML/CSS website",
+          "nicePart":"Nice background visual",
+          "link":"<a href='http://www.hulger.com' target='_blank'>Visit website!</a>"
+      }
+   ] 
+} 
