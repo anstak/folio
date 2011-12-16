@@ -129,7 +129,7 @@ function animateIn(){
 		$(this).addClass('open');
 		$(this).dequeue();
 		$(this).find('video>source').attr('src','video/'+_data_array[_currentProjet_int]['video']+'.mp4');
-		$(this).find('video').load();	
+		$(this).find('video').get(0).load();	
 		$(this).find('video').get(0).play();
 		$(this).find('h2').empty().html(_data_array[_currentProjet_int]['titre']);
 	})
