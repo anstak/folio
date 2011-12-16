@@ -223,7 +223,7 @@ function loadData(){
 		    	document.location.hash = '!/'+_data_array[_currentProjet_int]['id'];
 		    }
 		    _currentUrl_str = document.location.hash;
-		    if(_utils.settings_obj.html.hasClass('csstransforms3d')){
+		    if(!_utils.settings_obj.html.hasClass('no-csstransforms3d')){
 		   		loadAllImg();	 
 				$('video').gVideo();
 				_utils.settings_obj.window.bind('resize',onResize);
