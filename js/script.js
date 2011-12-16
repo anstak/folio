@@ -49,17 +49,18 @@ function setSquare(){
 		$(this).css({'top':posY+'px',left:posX+'px'})
 		if(posX == 450)posY+=150;
 	})
-	$('.fleche-next').live('click',function (e){
+	$('a.fleche-next').live('click',function (e){
 		e.preventDefault();
 		goNext();
 
 	});
-	$('.fleche-prev').live('click',function (e){
+	$('a.fleche-prev').live('click',function (e){
 		e.preventDefault();
 		goPrev();
 	});
 	animateIn();
 }
+
 function goNext(){
 	if(!$('#front').hasClass('open'))return;
 	var projet_int = _currentProjet_int + 1;		
@@ -77,7 +78,7 @@ function animateOut(){
 	_isImgLoaded_bool = false;
 	loadImg();	
 	$('#front').removeClass('open');
-	$('.fleche-next,.fleche-prev ').fadeOut(500,'easeInOutCubic');
+	$('a.fleche-next,a.fleche-prev ').fadeOut(500,'easeInOutCubic');
 	setTimeout(animateSquareOut,300);
 }
 
@@ -143,7 +144,7 @@ function animateIn(){
 	back.find('p.link').html(_data_array[_currentProjet_int]['link']);
 
 	
-	$('.fleche-next,.fleche-prev').delay(1000).fadeIn(500,'easeInOutCubic');
+	$('a.fleche-next,a.fleche-prev').delay(1000).fadeIn(500,'easeInOutCubic');
 	setTimeout(setSquareListener,1000);
 
 }
@@ -157,7 +158,7 @@ function setSquareListener(){
 }
 var x,y;
 function setMouse(){
-	var window_el = $(window);
+	var window_el = _utils.settings_obj.window;
 	window_el.bind('mousemove',function(e){
 		var width = window_el.width(),height=window_el.height(),posX,posY;
 		
@@ -170,7 +171,6 @@ function setMouse(){
 }
 function setKeyboard(){
 	$(document).bind('keydown',function(e){
-		console.log(e.keyCode)
 		switch(e.keyCode){
 			case 38:
 				if($('#front').hasClass('open'))toggleMore();
@@ -200,9 +200,9 @@ function movePlan(x,y){
 }
 
 
-var _utils5g = new Utils();
+var _utils = new Utils();
 $(function(){
-	_utils5g.init();
+	_utils.init();
 	loadData();
 
 });
@@ -222,10 +222,10 @@ function loadData(){
 		    	document.location.hash = '!/'+_data_array[_currentProjet_int]['id'];
 		    }
 		    _currentUrl_str = document.location.hash;
-		    if($('html').hasClass('csstransforms3d')){
-		   loadAllImg();	 
-		$('video').gVideo();
-			_utils5g.settings_obj.window.bind('resize',onResize);
+		    if(_utils.settings_obj.html.hasClass('csstransforms3d')){
+		   		loadAllImg();	 
+				$('video').gVideo();
+				_utils.settings_obj.window.bind('resize',onResize);
 			onResize();		
 		}else{
 			initSite();
@@ -331,7 +331,7 @@ function toggleContact(){
 
 var scale =1;
 function onResize(){
-	var width = _utils5g.settings_obj.window.width(),height=_utils5g.settings_obj.window.height();		
+	var width = _utils.settings_obj.window.width(),height=_utils.settings_obj.window.height();		
 	var scaleX = (width/1200),scaleY = height/800;
 	if(scaleX>1)scaleX=1;
 	if(scaleY>1)scaleY=1;
